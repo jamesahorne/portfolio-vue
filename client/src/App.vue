@@ -3,6 +3,7 @@
     <Header/>
     <main class="l-main">
       <Home/>
+      <About/>
     </main>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Header from './components/Header'
 import Home from './components/Home'
+import About from './components/About'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Home
+    Home,
+    About
   }
 }
 </script>
