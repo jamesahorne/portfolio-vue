@@ -4,6 +4,7 @@
     <main class="l-main">
       <Home/>
       <About/>
+      <Technologies/>
     </main>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
+import Technologies from './components/Technologies'
 
 export default {
   name: 'App',
   components: {
     Header,
     Home,
-    About
+    About,
+    Technologies
   }
 }
 </script>
