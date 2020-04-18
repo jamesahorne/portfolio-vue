@@ -5,6 +5,7 @@
       <Home/>
       <About/>
       <Technologies/>
+      <Projects/>
     </main>
   </div>
 </template>
@@ -14,6 +15,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
 import Technologies from './components/Technologies'
+import Projects from './components/Projects'
 
 export default {
   name: 'App',
@@ -21,7 +23,8 @@ export default {
     Header,
     Home,
     About,
-    Technologies
+    Technologies,
+    Projects
   }
 }
 </script>
