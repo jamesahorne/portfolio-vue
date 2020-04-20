@@ -11,8 +11,8 @@
           <h3 class="u-heading-3 u-heading-3--center">{{ project.heading }}</h3>
           <figure class="project-card__figure">
             <img class="project-card__image"
-                src="../assets/images/projects/my-portfolio.png"
-                alt="Here is the alt"
+                :src="getProjectImage( project.image )"
+                :alt="`A screenshot of ${ project.image_alt }`"
             >
             <figcaption class="project-card__caption">
               <p class="u-text u-text--center">{{ project.description}}</p>
@@ -37,9 +37,16 @@ export default {
           "id": "my-portfolio",
           "heading": "My portfolio site",
           "description": "This is my personal site. It doesn't do very much, but it looks nice!",
+          "image": "my-portfolio.png",
+          "image_alt": "my portfolio site",
           "link": "https://www.jamesahorne.dev"
         }
       ]
+    }
+  },
+  methods: {
+    getProjectImage(projectImage) {
+      return require(`../assets/images/projects/${ projectImage }`)
     }
   }
 }
