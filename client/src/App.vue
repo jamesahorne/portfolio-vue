@@ -6,6 +6,7 @@
       <About/>
       <Technologies/>
       <Projects/>
+      <Cv/>
     </main>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
+import Cv from './components/Cv'
 
 export default {
   name: 'App',
@@ -24,7 +26,8 @@ export default {
     Home,
     About,
     Technologies,
-    Projects
+    Projects,
+    Cv
   }
 }
 </script>
