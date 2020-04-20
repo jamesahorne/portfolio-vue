@@ -14,12 +14,8 @@
 export default {
   name: 'Contact',
   mounted() {
-    const roleDetails = document.getElementById('contact__role-details');
-
-    if (typeof(roleDetails) != 'undefined' && roleDetails != null) {
-      const roleDetailsParent = roleDetails.parentNode;
-      roleDetailsParent.style.position = 'relative';
-    }
-  },
+    const roleDetailsParent = document.getElementById('contact__role-details').parentNode;
+    roleDetailsParent.style.position = 'relative';
+  }
 }
 </script>
