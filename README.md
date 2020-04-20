@@ -9,3 +9,5 @@ npm run dev
 
 ## To add
 - CV download
+- Vanilla click events to Vue on click
+- Email to work
