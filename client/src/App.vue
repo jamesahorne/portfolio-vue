@@ -7,6 +7,7 @@
       <Technologies/>
       <Projects/>
       <Cv/>
+      <Contact/>
     </main>
   </div>
 </template>
@@ -18,6 +19,7 @@ import About from './components/About'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import Cv from './components/Cv'
+import Contact from './components/Contact'
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     About,
     Technologies,
     Projects,
-    Cv
+    Cv,
+    Contact
   }
 }
 </script>
