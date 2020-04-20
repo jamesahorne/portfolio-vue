@@ -7,7 +7,5 @@ To run Express app in development:
 npm run dev
 ```
 
-## To add
+## To do
 - CV download
-- Vanilla click events to Vue on click
-- Email to work
