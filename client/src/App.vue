@@ -9,6 +9,7 @@
       <Cv/>
       <Contact/>
     </main>
+    <Footer/>
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import Cv from './components/Cv'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
@@ -30,7 +32,8 @@ export default {
     Technologies,
     Projects,
     Cv,
-    Contact
+    Contact,
+    Footer
   }
 }
 </script>
