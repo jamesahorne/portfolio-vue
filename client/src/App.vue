@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to my portfolio site"/>
+    <Header/>
+    <main class="l-main">
+      <Home/>
+      <About/>
+      <Technologies/>
+      <Projects/>
+      <Cv/>
+      <Contact/>
+    </main>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
+import Technologies from './components/Technologies'
+import Projects from './components/Projects'
+import Cv from './components/Cv'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Home,
+    About,
+    Technologies,
+    Projects,
+    Cv,
+    Contact,
+    Footer
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">  
+@import './assets/css/style.min.css';
 </style>
