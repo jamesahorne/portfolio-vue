@@ -1406,27 +1406,27 @@ body {
 }
 
 .cv__portfolio:before {
-  background-image: url("/images/cv/icon-portfolio.svg");
+  background-image: url("../images/cv/icon-portfolio.svg");
 }
 
 .cv__github:before {
-  background-image: url("/images/cv/icon-github.svg");
+  background-image: url("../images/cv/icon-github.svg");
 }
 
 .cv__email:before {
-  background-image: url("/images/cv/icon-email.svg");
+  background-image: url("../images/cv/icon-email.svg");
 }
 
 .cv__phone:before {
-  background-image: url("/images/cv/icon-phone.svg");
+  background-image: url("../images/cv/icon-phone.svg");
 }
 
 .cv__music:before {
-  background-image: url("/images/cv/icon-music.svg");
+  background-image: url("../images/cv/icon-music.svg");
 }
 
 .cv__fitness:before {
-  background-image: url("/images/cv/icon-fitness.svg");
+  background-image: url("../images/cv/icon-fitness.svg");
 }
 
 .cv__experience-block {
