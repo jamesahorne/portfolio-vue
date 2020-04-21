@@ -1,7 +1,7 @@
 <template>
   <article class="projects" id="projects">
     <div class="l-spacing">
-      <h2 class="u-heading-1">Enjoy my previous work</h2>
+      <h2 class="u-heading-1">Enjoy my previous work:</h2>
       <div class="projects__grid projects__grid--1">
         <!-- Can't loop through template root, so am including the ProjectCard component inside Projects -->
         <div class="project-card"
