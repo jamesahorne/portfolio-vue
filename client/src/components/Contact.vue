@@ -3,7 +3,7 @@
     <div class="l-spacing">
       <h2 class="u-heading-1">Let's chat!</h2>
       <p class="u-text">
-        If you're interested in a conversation, email me. I'm looking for a
+        If you're interested in a conversation, <a class="u-link" href="mailto:james99h39@gmail.com">email me</a>. I'm looking for a
         <button class="contact__role"
                 id="contact__role"
                 aria-expanded="false"
