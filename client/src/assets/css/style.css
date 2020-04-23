@@ -1409,6 +1409,10 @@ body {
   background-image: url("../images/cv/icon-portfolio.svg");
 }
 
+.cv__linked-in:before {
+  background-image: url("../images/cv/icon-linked-in.svg");
+}
+
 .cv__github:before {
   background-image: url("../images/cv/icon-github.svg");
 }
@@ -1763,6 +1767,7 @@ body {
   .accordion__button:after {
     content: '\02795';
     font-size: 0.75rem;
+    color: #5584F6;
     float: right;
     height: 14px;
     padding: 4px 0 4px 3px;
