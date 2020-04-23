@@ -5,7 +5,7 @@
       <div class="cv__main">
         <header class="cv__header">
           <h1 class="cv__title">James Horne</h1>
-          <h2 class="cv__subtitle">Online CV</h2>
+          <h2 class="cv__subtitle">Front-End Developer</h2>
         </header>
         <div class="cv__layout">
           <section class="cv__primary">
@@ -58,6 +58,7 @@
               <div class="cv__content">
                 <ul class="cv__list cv__list--icons cv__list--big">
                   <li class="cv__portfolio"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">www.jamesahorne.dev</a></li>
+                  <li class="cv__linked-in"><a class="u-link u-link--cv" href="https://www.linkedin.com/in/jamesahorne/">jamesahorne</a></li>
                   <li class="cv__github"><a class="u-link u-link--cv" href="https://github.com/jamesahorne/">jamesahorne</a></li>
                   <li class="cv__email"><a class="u-link u-link--cv" href="mailto:james99h39@gmail.com">james99h39@gmail.com</a></li>
                   <li class="cv__phone">07531 180950</li>
