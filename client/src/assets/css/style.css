@@ -39,13 +39,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/open-sans-v17-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v17-latin-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/open-sans-v17-latin-italic.woff2") format("woff2"), url("../fonts/open-sans-v17-latin-italic.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -53,13 +47,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/open-sans-v17-latin-600.woff2") format("woff2"), url("../fonts/open-sans-v17-latin-600.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/open-sans-v17-latin-700.woff2") format("woff2"), url("../fonts/open-sans-v17-latin-700.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -67,13 +55,7 @@ input, textarea, button {
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/open-sans-v17-latin-700italic.woff2") format("woff2"), url("../fonts/open-sans-v17-latin-700italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/baloo-2-v1-latin-regular.woff2") format("woff2"), url("../fonts/baloo-2-v1-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -81,20 +63,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/baloo-2-v1-latin-500.woff2") format("woff2"), url("../fonts/baloo-2-v1-latin-500.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/baloo-2-v1-latin-600.woff2") format("woff2"), url("../fonts/baloo-2-v1-latin-600.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/baloo-2-v1-latin-700.woff2") format("woff2"), url("../fonts/baloo-2-v1-latin-700.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -102,6 +71,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/lalezar-v6-latin-regular.woff2") format("woff2"), url("../fonts/lalezar-v6-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -109,6 +79,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/montserrat-v14-latin-300.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-300.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -116,6 +87,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -123,6 +95,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/raleway-v14-latin-500.woff2") format("woff2"), url("../fonts/raleway-v14-latin-500.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -130,6 +103,7 @@ input, textarea, button {
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/raleway-v14-latin-600.woff2") format("woff2"), url("../fonts/raleway-v14-latin-600.woff") format("woff");
+  font-display: swap;
 }
 
 .u-heading-1 {
@@ -1205,7 +1179,6 @@ body {
 
 .cv__title,
 .cv__subtitle {
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
   text-align: center;
@@ -1226,6 +1199,7 @@ body {
 
 .cv__subtitle {
   font-size: 1.25rem;
+  font-weight: 400;
   color: #858585;
 }
 
@@ -1378,7 +1352,7 @@ body {
 .cv__list--bullets li:before {
   content: "\2022";
   color: #5584F6;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
   display: inline-block;
   width: 1rem;
@@ -1459,19 +1433,9 @@ body {
 }
 
 .cv__date {
-  display: block;
   font-size: 0.75rem;
   font-weight: 400;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-@media (min-width: 36rem) {
-  .cv__date {
-    display: inline;
-    margin-top: 0;
-    float: right;
-  }
+  float: right;
 }
 
 @media (min-width: 36rem) {
