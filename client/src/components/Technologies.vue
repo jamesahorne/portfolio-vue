@@ -30,7 +30,7 @@ export default {
         {
           "id": "express",
           "heading": "Express",
-          "contents": "I've not used Express much, only for some basic routing. Once I finish my portfolio I'll start work on a e-commerce app which will be more complex and will grow me more."
+          "contents": "I'm teaching myself Express too. This site uses Express for some routing and middleware."
         },
         {
           "id": "pattern-lab",
