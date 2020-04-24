@@ -10,14 +10,20 @@
         >
           <h3 class="u-heading-3 u-heading-3--center">{{ project.heading }}</h3>
           <figure class="project-card__figure">
-            <img class="project-card__image"
-                :src="getProjectImage( project.image )"
-                :alt="`A screenshot of ${ project.image_alt }`"
-            >
+            <picture>
+              <source :srcset="getProjectImage( project.image_webp )"
+                      media="(min-width: 320px)"
+                      type="image/webp"
+              >
+              <img class="project-card__image"
+                   :src="getProjectImage( project.image_other )"
+                   :alt="`A screenshot of ${ project.image_alt }`"
+              >
+            </picture>
             <figcaption class="project-card__caption">
               <p class="u-text u-text--center">{{ project.description}}</p>
               <p class="u-text u-text--center">
-                <a class="u-link u-link--invert-@md" :href="project.link">See for yourself</a>
+                <a class="project-card__link" :href="project.link">See for yourself</a>
               </p>
             </figcaption>
           </figure>
@@ -37,7 +43,8 @@ export default {
           "id": "my-portfolio",
           "heading": "My portfolio site",
           "description": "This is my personal site. It doesn't do very much, but it looks nice!",
-          "image": "my-portfolio.png",
+          "image_webp": "my-portfolio.webp",
+          "image_other": "my-portfolio.png",
           "image_alt": "my portfolio site",
           "link": "https://www.jamesahorne.dev"
         }
