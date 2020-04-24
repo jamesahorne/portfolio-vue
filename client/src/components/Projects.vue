@@ -23,7 +23,7 @@
             <figcaption class="project-card__caption">
               <p class="u-text u-text--center">{{ project.description}}</p>
               <p class="u-text u-text--center">
-                <a class="u-link u-link--invert-@md" :href="project.link">See for yourself</a>
+                <a class="project-card__link" :href="project.link">See for yourself</a>
               </p>
             </figcaption>
           </figure>
