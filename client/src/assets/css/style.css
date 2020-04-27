@@ -464,7 +464,6 @@ body {
 @media (min-width: 36rem) {
   .nav__item {
     font-size: 1.5625rem;
-    font-weight: 300;
   }
 }
 
@@ -1741,6 +1740,7 @@ body {
   .header {
     padding: 1rem 1rem 1rem 1.5rem;
     height: 74px;
+    font-weight: 300;
   }
 }
 
