@@ -14,7 +14,7 @@ module.exports = {
           'og:type': 'website',
           'og:title': 'jamesahorne.dev | Front-end developer',
           'og:description': 'Hi, I\'m James. I build websites. I\'m a front-end web developer and this is my personal site. Interested? Contact me!',
-          'og:image': 'https://www.jamesahorne.dev/img/my-portfolio.b1e45ffc.png'
+          'og:image': 'https://www.jamesahorne.dev/img/my-portfolio.8434ea68.png'
         };
         return args;
       })
