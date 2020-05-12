@@ -12,43 +12,51 @@
             <article class="cv__section cv__section--summary">
               <h3 class="cv__heading-1">Summary</h3>
               <div class="cv__content">
-                <p>Driven and enthusiastic front-end developer with a desire to deliver a high-quality front-end, looking to gain more experience and keep learning and growing.</p>
+                <p>Driven and enthusiastic front-end developer with a desire to deliver a high-quality front-end, looking to gain experience and keep learning and growing.</p>
+              </div>
+            </article>
+            <article class="cv__section cv__section--projects">
+              <h3 class="cv__heading-1">Projects</h3>
+              <div class="cv__content">
+                <ul class="cv__list cv__list--bullets">
+                  <li v-for="(project, index) in projects"
+                      :key="project.id + index"
+                  >
+                    {{ project.item }}
+                  </li>
+                </ul>
               </div>
             </article>
             <article class="cv__section cv__section--experience">
               <h3 class="cv__heading-1">Experience</h3>
               <div class="cv__content">
-                <article class="cv__experience-block">
+                <article class="cv__experience-block"
+                         v-for="experience in experiences"
+                         :key="'cv__experience--' + experience.id"
+                >
                   <h4 class="cv__heading-2">
-                    Web developer
-                    <span class="cv__date">Sep 19 - Mar 20</span>
+                    {{ experience.title }}
+                    <span class="cv__date"
+                          v-if="experience.endDate"
+                    >
+                      {{ experience.startDate }} - {{ experience.endDate }}
+                    </span>
+                    <span class="cv__date"
+                          v-else
+                    >
+                      {{ experience.startDate }} - present
+                    </span>
                   </h4>
-                  <h5 class="cv__heading-3">Daughter</h5>
-                  <p>Front-end builds including building pattern libraries with Pattern Lab. Some integration with backend.</p>
+                  <h5 class="cv__heading-3">{{ experience.company }}</h5>
+                  <p>{{ experience.description }}</p>
                   <ul class="cv__list cv__list--bullets">
-                    <li>Lead small and medium-size projects</li>
-                    <li>Build and use pattern libraries</li>
-                    <li>Liaise with and support clients</li>
-                    <li>Agile development</li>
-                    <li>Introduce use of CSS Grid</li>
-                    <li>Using Trello and Jira for project management</li>
+                    <li v-for="detail in experience.details"
+                        :key="'cv__experience-details--' + detail.id"
+                    >
+                      {{ detail.item }}
+                    </li>
                   </ul>
                 </article>
-              </div>
-            </article>
-            <article class="cv__section cv__section--skills">
-              <h3 class="cv__heading-1">Skills</h3>
-              <div class="cv__content">
-                <ul class="cv__list cv__list--skills">
-                  <li>HTML5 <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                  <li>CSS3 <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                  <li>JavaScript <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-                  <li>SASS (SCSS) <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-                  <li>jQuery <span class="cv__star">&#9733; &#9733;</span></li>
-                  <li>Mobile-first <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                  <li>Bootstrap <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                  <li>Git <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-                </ul>
               </div>
             </article>
           </section>
@@ -56,7 +64,7 @@
             <aside class="cv__section cv__section--contact">
               <h3 class="cv__heading-1">Contact</h3>
               <div class="cv__content">
-                <ul class="cv__list cv__list--icons cv__list--big">
+                <ul class="cv__list cv__list--icons">
                   <li class="cv__portfolio"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">www.jamesahorne.dev</a></li>
                   <li class="cv__linked-in"><a class="u-link u-link--cv" href="https://www.linkedin.com/in/jamesahorne/">jamesahorne</a></li>
                   <li class="cv__github"><a class="u-link u-link--cv" href="https://github.com/jamesahorne/">jamesahorne</a></li>
@@ -65,33 +73,45 @@
                 </ul>
               </div>
             </aside>
+            <article class="cv__section cv__section--skills">
+              <h3 class="cv__heading-1">Skills</h3>
+              <div class="cv__content">
+                <ul class="cv__list cv__list--skills">
+                  <li v-for="skill in skills"
+                      :key="'cv__skill--' + skill.id"
+                  >
+                    {{ skill.item }}
+                    <div class="cv__star">
+                      <span v-for="number in skill.starNumber"
+                            :key="'cv__skill-star--' + skill.id + number"
+                      >
+                        &#9733;
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
             <article class="cv__section cv__section--education">
               <h3 class="cv__heading-1">Education</h3>
               <div class="cv__content">
                 <ul class="cv__list">
                   <li>Diploma in Software Development</li>
-                  <li class="cv__sublist">A Levels
+                  <li class="cv__sublist">
+                    A Levels
                     <ul>
                       <li>A (maths)</li>
                       <li>B (further maths)</li>
                       <li>C (biology)</li>
                     </ul>
                   </li>
-                  <li class="cv__sublist">GCSEs
+                  <li class="cv__sublist">
+                    GCSEs
                     <ul>
-                      <li>7 As (including maths and English)</li>
+                      <li>7 As</li>
                       <li>4 Bs</li>
                     </ul>
                   </li>
-                </ul>
-              </div>
-            </article>
-            <article class="cv__section cv__section--interests">
-              <h3 class="cv__heading-1">Interests</h3>
-              <div class="cv__content">
-                <ul class="cv__list cv__list--icons">
-                  <li class="cv__music">I am a keen musician and self-taught guitarist. I sing and play piano too.</li>
-                  <li class="cv__fitness">I also go the gym, run and play football.</li>
                 </ul>
               </div>
             </article>
@@ -104,6 +124,102 @@
 
 <script>
 export default {
-  name: 'Cv'
+  name: 'Cv',
+  data() {
+    return {
+      projects: [
+        {
+          id: Date.now(),
+          item: 'My portfolio site is made with Vue, which I use for list rendering and passing data with props'
+        },
+        {
+          id: Date.now(),
+          item: 'I built a todo app in Vue, with full CRUD functionality'
+        },
+        {
+          id: Date.now(),
+          item: 'I made a pattern library for my portfolio site with Pattern Lab. I also used Gulp and Browsersync'
+        }
+      ],
+      experiences: [
+        {
+          id: Date.now(),
+          title: 'Web developer',
+          company: 'Daughter',
+          startDate: 'Sep 19',
+          endDate: 'Mar 20',
+          description: 'Front-end builds, usually in the form of a pattern library.',
+          details: [
+            {
+              id: Date.now(),
+              item: 'Lead small and medium-size projects'
+            },
+            {
+              id: Date.now() + 1,
+              item: 'Build and maintain pattern libraries'
+            },
+            {
+              id: Date.now() + 2,
+              item: 'Support and liaise with clients'
+            },
+            {
+              id: Date.now() + 3,
+              item: 'Agile development'
+            },
+            {
+              id: Date.now() + 4,
+              item: 'Introduce use of CSS Grid'
+            },
+            {
+              id: Date.now() + 5,
+              item: 'Using Trello and Jira for project management'
+            }
+          ]
+        }
+      ],
+      skills: [
+        {
+          id: Date.now(),
+          item: 'HTML5',
+          starNumber: 4
+        },
+        {
+          id: Date.now() + 1,
+          item: 'CSS3',
+          starNumber: 4
+        },
+        {
+          id: Date.now() + 2,
+          item: 'Mobile-first',
+          starNumber: 4
+        },
+        {
+          id: Date.now() + 3,
+          item: 'JavaScript',
+          starNumber: 3
+        },
+        {
+          id: Date.now() + 4,
+          item: 'SASS (SCSS)',
+          starNumber: 3
+        },
+        {
+          id: Date.now() + 5,
+          item: 'Git',
+          starNumber: 3
+        },
+        {
+          id: Date.now() + 6,
+          item: 'Vue.js',
+          starNumber: 2
+        },
+        {
+          id: Date.now() + 7,
+          item: 'jQuery',
+          starNumber: 2
+        }
+      ]
+    }
+  },
 }
 </script>
