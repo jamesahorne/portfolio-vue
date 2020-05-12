@@ -19,6 +19,9 @@ import Accordion from './Accordion'
 
 export default {
   name: 'Techonologies',
+  components: {
+    Accordion
+  },
   data() {
     return {
       technologies: [
@@ -35,13 +38,10 @@ export default {
         {
           "id": "pattern-lab",
           "heading": "Pattern Lab",
-          "contents": "I build a pattern library for every major project I do, with a bit of gulp on the side too."
+          "contents": "I build a pattern library for every major project I do, using Gulp and Browsersync for tasks such as watching files and compiling SCSS into minified, autoprefixed CSS."
         }
       ]
     }
-  },
-  components: {
-    Accordion
   }
 }
 </script>
