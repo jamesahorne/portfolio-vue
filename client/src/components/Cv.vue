@@ -19,42 +19,36 @@
               <h3 class="cv__heading-1">Projects</h3>
               <div class="cv__content">
                 <ul class="cv__list cv__list--bullets">
-                  <li v-for="(project, index) in projects"
-                      :key="project.id + index"
-                  >
-                    {{ project.item }}
-                  </li>
+                  <li
+                    v-for="(project, index) in projects"
+                    :key="project.id + index"
+                  >{{ project.item }}</li>
                 </ul>
               </div>
             </article>
             <article class="cv__section cv__section--experience">
               <h3 class="cv__heading-1">Experience</h3>
               <div class="cv__content">
-                <article class="cv__experience-block"
-                         v-for="experience in experiences"
-                         :key="'cv__experience--' + experience.id"
+                <article
+                  class="cv__experience-block"
+                  v-for="experience in experiences"
+                  :key="'cv__experience--' + experience.id"
                 >
                   <h4 class="cv__heading-2">
                     {{ experience.title }}
-                    <span class="cv__date"
-                          v-if="experience.endDate"
-                    >
-                      {{ experience.startDate }} - {{ experience.endDate }}
-                    </span>
-                    <span class="cv__date"
-                          v-else
-                    >
-                      {{ experience.startDate }} - present
-                    </span>
+                    <span
+                      class="cv__date"
+                      v-if="experience.endDate"
+                    >{{ experience.startDate }} - {{ experience.endDate }}</span>
+                    <span class="cv__date" v-else>{{ experience.startDate }} - present</span>
                   </h4>
                   <h5 class="cv__heading-3">{{ experience.company }}</h5>
                   <p>{{ experience.description }}</p>
                   <ul class="cv__list cv__list--bullets">
-                    <li v-for="detail in experience.details"
-                        :key="'cv__experience-details--' + detail.id"
-                    >
-                      {{ detail.item }}
-                    </li>
+                    <li
+                      v-for="detail in experience.details"
+                      :key="'cv__experience-details--' + detail.id"
+                    >{{ detail.item }}</li>
                   </ul>
                 </article>
               </div>
@@ -65,10 +59,27 @@
               <h3 class="cv__heading-1">Contact</h3>
               <div class="cv__content">
                 <ul class="cv__list cv__list--icons">
-                  <li class="cv__portfolio"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">www.jamesahorne.dev</a></li>
-                  <li class="cv__linked-in"><a class="u-link u-link--cv" href="https://www.linkedin.com/in/jamesahorne/">jamesahorne</a></li>
-                  <li class="cv__github"><a class="u-link u-link--cv" href="https://github.com/jamesahorne/">jamesahorne</a></li>
-                  <li class="cv__email"><a class="u-link u-link--cv" href="mailto:james99h39@gmail.com">james99h39@gmail.com</a></li>
+                  <li class="cv__portfolio">
+                    <a
+                      class="u-link u-link--cv"
+                      href="https://www.jamesahorne.dev"
+                    >www.jamesahorne.dev</a>
+                  </li>
+                  <li class="cv__linked-in">
+                    <a
+                      class="u-link u-link--cv"
+                      href="https://www.linkedin.com/in/jamesahorne/"
+                    >jamesahorne</a>
+                  </li>
+                  <li class="cv__github">
+                    <a class="u-link u-link--cv" href="https://github.com/jamesahorne/">jamesahorne</a>
+                  </li>
+                  <li class="cv__email">
+                    <a
+                      class="u-link u-link--cv"
+                      href="mailto:james99h39@gmail.com"
+                    >james99h39@gmail.com</a>
+                  </li>
                   <li class="cv__phone">07531 180950</li>
                 </ul>
               </div>
@@ -77,16 +88,13 @@
               <h3 class="cv__heading-1">Skills</h3>
               <div class="cv__content">
                 <ul class="cv__list cv__list--skills">
-                  <li v-for="skill in skills"
-                      :key="'cv__skill--' + skill.id"
-                  >
+                  <li v-for="skill in skills" :key="'cv__skill--' + skill.id">
                     {{ skill.item }}
                     <div class="cv__star">
-                      <span v-for="number in skill.starNumber"
-                            :key="'cv__skill-star--' + skill.id + number"
-                      >
-                        &#9733;
-                      </span>
+                      <span
+                        v-for="number in skill.starNumber"
+                        :key="'cv__skill-star--' + skill.id + number"
+                      >&#9733;</span>
                     </div>
                   </li>
                 </ul>
@@ -124,102 +132,107 @@
 
 <script>
 export default {
-  name: 'Cv',
+  name: "Cv",
   data() {
     return {
       projects: [
         {
           id: Date.now(),
-          item: 'My portfolio site is made with Vue, which I use for list rendering and passing data with props'
+          item:
+            "My portfolio site is made with Vue, which I use for list rendering and passing data with props",
         },
         {
           id: Date.now(),
-          item: 'I built a todo app in Vue, with full CRUD functionality'
+          item: "I built a todo app in Vue, with full CRUD functionality",
         },
         {
           id: Date.now(),
-          item: 'I made a pattern library for my portfolio site with Pattern Lab. I also used Gulp and Browsersync'
-        }
+          item:
+            "I made a pattern library for my portfolio site with Pattern Lab. I also used Gulp and Browsersync",
+        },
       ],
       experiences: [
         {
           id: Date.now(),
-          title: 'Web developer',
-          company: 'Daughter',
-          startDate: 'Sep 19',
-          endDate: 'Mar 20',
-          description: 'Front-end builds, usually in the form of a pattern library.',
+          title: "Web developer",
+          company: "Daughter",
+          startDate: "Sep 19",
+          endDate: "Mar 20",
+          description:
+            "Front-end builds, usually in the form of a pattern library.",
           details: [
             {
               id: Date.now(),
-              item: 'Lead small and medium-size projects'
+              item:
+                "Build the frontend for a charity whose Twitter hashtag reached #5 in the UK on their fundraiser's launch day",
             },
             {
               id: Date.now() + 1,
-              item: 'Build and maintain pattern libraries'
+              item:
+                "Work on ongoing development for one of the UK's leading car leasing companies",
             },
             {
               id: Date.now() + 2,
-              item: 'Support and liaise with clients'
+              item: "Lead small and medium-size projects",
             },
             {
               id: Date.now() + 3,
-              item: 'Agile development'
+              item: "Support and liaise with clients",
             },
             {
               id: Date.now() + 4,
-              item: 'Introduce use of CSS Grid'
+              item: "Agile development",
             },
             {
               id: Date.now() + 5,
-              item: 'Using Trello and Jira for project management'
-            }
-          ]
-        }
+              item: "Use Trello and Jira for project management",
+            },
+          ],
+        },
       ],
       skills: [
         {
           id: Date.now(),
-          item: 'HTML5',
-          starNumber: 4
+          item: "HTML5",
+          starNumber: 4,
         },
         {
           id: Date.now() + 1,
-          item: 'CSS3',
-          starNumber: 4
-        },
-        {
-          id: Date.now() + 2,
-          item: 'Mobile-first',
-          starNumber: 4
+          item: "CSS3",
+          starNumber: 4,
         },
         {
           id: Date.now() + 3,
-          item: 'JavaScript',
-          starNumber: 3
+          item: "JavaScript",
+          starNumber: 3,
         },
         {
           id: Date.now() + 4,
-          item: 'SASS (SCSS)',
-          starNumber: 3
+          item: "SASS (SCSS)",
+          starNumber: 3,
+        },
+        {
+          id: Date.now() + 2,
+          item: "REST APIs",
+          starNumber: 3,
         },
         {
           id: Date.now() + 5,
-          item: 'Git',
-          starNumber: 3
+          item: "Git",
+          starNumber: 3,
         },
         {
           id: Date.now() + 6,
-          item: 'Vue.js',
-          starNumber: 2
+          item: "Vue.js",
+          starNumber: 2,
         },
         {
           id: Date.now() + 7,
-          item: 'jQuery',
-          starNumber: 2
-        }
-      ]
-    }
+          item: "jQuery",
+          starNumber: 2,
+        },
+      ],
+    };
   },
-}
+};
 </script>
