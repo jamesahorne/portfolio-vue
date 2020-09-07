@@ -193,37 +193,37 @@ export default {
       skills: [
         {
           id: Date.now(),
-          item: "HTML5",
+          item: "HTML & CSS",
           starNumber: 4,
         },
         {
           id: Date.now() + 1,
-          item: "CSS3",
-          starNumber: 4,
-        },
-        {
-          id: Date.now() + 3,
           item: "JavaScript",
           starNumber: 3,
         },
         {
-          id: Date.now() + 4,
+          id: Date.now() + 2,
           item: "SASS (SCSS)",
           starNumber: 3,
         },
         {
-          id: Date.now() + 2,
+          id: Date.now() + 3,
           item: "REST APIs",
           starNumber: 3,
         },
         {
-          id: Date.now() + 5,
+          id: Date.now() + 4,
           item: "Git",
           starNumber: 3,
         },
         {
+          id: Date.now() + 5,
+          item: "React",
+          starNumber: 2,
+        },
+        {
           id: Date.now() + 6,
-          item: "Vue.js",
+          item: "Vue",
           starNumber: 2,
         },
         {
